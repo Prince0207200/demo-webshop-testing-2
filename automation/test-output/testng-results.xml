@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-08-26T22:48:55 IST" name="CrossBrowserSuite" finished-at="2025-08-26T22:49:14 IST" duration-ms="18495">
+    <groups>
+    </groups>
+    <test started-at="2025-08-26T22:48:55 IST" name="EdgeTest" finished-at="2025-08-26T22:49:13 IST" duration-ms="18452">
+      <class name="automation.LoginTest">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:automation.LoginTest@6913c1fb]" started-at="2025-08-26T22:48:55 IST" name="setup" finished-at="2025-08-26T22:48:59 IST" duration-ms="3941" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="loginWithValidCredentials()[pri:0, instance:automation.LoginTest@6913c1fb]" started-at="2025-08-26T22:48:59 IST" name="loginWithValidCredentials" finished-at="2025-08-26T22:49:05 IST" duration-ms="5742" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithValidCredentials -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.LoginTest@6913c1fb]" started-at="2025-08-26T22:49:05 IST" name="tearDown" finished-at="2025-08-26T22:49:05 IST" duration-ms="550" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:automation.LoginTest@6913c1fb]" started-at="2025-08-26T22:49:05 IST" name="setup" finished-at="2025-08-26T22:49:08 IST" duration-ms="3069" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="loginWithValidEmailWrongPassword()[pri:0, instance:automation.LoginTest@6913c1fb]" started-at="2025-08-26T22:49:08 IST" name="loginWithValidEmailWrongPassword" finished-at="2025-08-26T22:49:13 IST" duration-ms="4764" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithValidEmailWrongPassword -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.LoginTest@6913c1fb]" started-at="2025-08-26T22:49:13 IST" name="tearDown" finished-at="2025-08-26T22:49:13 IST" duration-ms="311" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- automation.LoginTest -->
+    </test> <!-- EdgeTest -->
+    <test started-at="2025-08-26T22:48:55 IST" name="ChromeTest" finished-at="2025-08-26T22:49:14 IST" duration-ms="18495">
+      <class name="automation.LoginTest">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:automation.LoginTest@4c402120]" started-at="2025-08-26T22:48:55 IST" name="setup" finished-at="2025-08-26T22:48:59 IST" duration-ms="4243" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="loginWithValidCredentials()[pri:0, instance:automation.LoginTest@4c402120]" started-at="2025-08-26T22:48:59 IST" name="loginWithValidCredentials" finished-at="2025-08-26T22:49:05 IST" duration-ms="5534" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithValidCredentials -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.LoginTest@4c402120]" started-at="2025-08-26T22:49:05 IST" name="tearDown" finished-at="2025-08-26T22:49:05 IST" duration-ms="433" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:automation.LoginTest@4c402120]" started-at="2025-08-26T22:49:05 IST" name="setup" finished-at="2025-08-26T22:49:08 IST" duration-ms="3073" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="loginWithValidEmailWrongPassword()[pri:0, instance:automation.LoginTest@4c402120]" started-at="2025-08-26T22:49:08 IST" name="loginWithValidEmailWrongPassword" finished-at="2025-08-26T22:49:13 IST" duration-ms="4602" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithValidEmailWrongPassword -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.LoginTest@4c402120]" started-at="2025-08-26T22:49:13 IST" name="tearDown" finished-at="2025-08-26T22:49:14 IST" duration-ms="533" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- automation.LoginTest -->
+    </test> <!-- ChromeTest -->
+  </suite> <!-- CrossBrowserSuite -->
+</testng-results>
