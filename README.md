@@ -84,7 +84,7 @@ mvn test
     - Publishing test results and console output
 
 ---
-
+## Jenkins Console Output
 [View Console Output (Text File)](/images/consolelog-output.txt)
 <details>
 <summary>🔧 Click to view sample Jenkins console output</summary>
