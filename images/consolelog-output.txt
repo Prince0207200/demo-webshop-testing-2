@@ -1,0 +1,264 @@
+Started by user Prince Gupta
+Obtained automation/Jenkinsfile from git https://github.com/Prince0207200/demo-webshop-testing-2.git
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in C:\Users\DELL\.jenkins\workspace\DemoWebshop-CICD
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+No credentials specified
+ > git.exe rev-parse --resolve-git-dir C:\Users\DELL\.jenkins\workspace\DemoWebshop-CICD\.git # timeout=10
+Fetching changes from the remote Git repository
+ > git.exe config remote.origin.url https://github.com/Prince0207200/demo-webshop-testing-2.git # timeout=10
+Fetching upstream changes from https://github.com/Prince0207200/demo-webshop-testing-2.git
+ > git.exe --version # timeout=10
+ > git --version # 'git version 2.50.1.windows.1'
+ > git.exe fetch --tags --force --progress -- https://github.com/Prince0207200/demo-webshop-testing-2.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+Checking out Revision 5841edd5cc43565bfe74ae125a1ad43467891e1e (refs/remotes/origin/master)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f 5841edd5cc43565bfe74ae125a1ad43467891e1e # timeout=10
+Commit message: "Update Jenkinsfile"
+ > git.exe rev-list --no-walk e9d758228f128573473b6067ef5fe69492f5c256 # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Tool Install)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Checkout)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] git
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+No credentials specified
+ > git.exe rev-parse --resolve-git-dir C:\Users\DELL\.jenkins\workspace\DemoWebshop-CICD\.git # timeout=10
+Fetching changes from the remote Git repository
+ > git.exe config remote.origin.url https://github.com/Prince0207200/demo-webshop-testing-2.git # timeout=10
+Fetching upstream changes from https://github.com/Prince0207200/demo-webshop-testing-2.git
+ > git.exe --version # timeout=10
+ > git --version # 'git version 2.50.1.windows.1'
+ > git.exe fetch --tags --force --progress -- https://github.com/Prince0207200/demo-webshop-testing-2.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+Checking out Revision 5841edd5cc43565bfe74ae125a1ad43467891e1e (refs/remotes/origin/master)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f 5841edd5cc43565bfe74ae125a1ad43467891e1e # timeout=10
+ > git.exe branch -a -v --no-abbrev # timeout=10
+ > git.exe branch -D master # timeout=10
+ > git.exe checkout -b master 5841edd5cc43565bfe74ae125a1ad43467891e1e # timeout=10
+Commit message: "Update Jenkinsfile"
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] echo
+🔧 Compiling the code...
+[Pipeline] dir
+Running in C:\Users\DELL\.jenkins\workspace\DemoWebshop-CICD\automation
+[Pipeline] {
+[Pipeline] bat
+
+C:\Users\DELL\.jenkins\workspace\DemoWebshop-CICD\automation>mvn clean compile 
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< com.demo:automation >-------------------------
+[INFO] Building automation 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-clean-plugin/3.2.0/maven-clean-plugin-3.2.0.pom
+Progress (1): 1.4/5.3 kBProgress (1): 2.8/5.3 kBProgress (1): 4.1/5.3 kBProgress (1): 5.3 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-clean-plugin/3.2.0/maven-clean-plugin-3.2.0.pom (5.3 kB at 4.8 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/35/maven-plugins-35.pom
+Progress (1): 1.4/9.9 kBProgress (1): 2.8/9.9 kBProgress (1): 4.1/9.9 kBProgress (1): 5.5/9.9 kBProgress (1): 6.9/9.9 kBProgress (1): 8.3/9.9 kBProgress (1): 9.7/9.9 kBProgress (1): 9.9 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/35/maven-plugins-35.pom (9.9 kB at 53 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/35/maven-parent-35.pom
+Progress (1): 1.4/45 kBProgress (1): 2.8/45 kBProgress (1): 4.1/45 kBProgress (1): 5.5/45 kBProgress (1): 6.9/45 kBProgress (1): 8.3/45 kBProgress (1): 9.7/45 kBProgress (1): 11/45 kB Progress (1): 12/45 kBProgress (1): 14/45 kBProgress (1): 15/45 kBProgress (1): 17/45 kBProgress (1): 18/45 kBProgress (1): 19/45 kBProgress (1): 21/45 kBProgress (1): 22/45 kBProgress (1): 23/45 kBProgress (1): 25/45 kBProgress (1): 26/45 kBProgress (1): 28/45 kBProgress (1): 29/45 kBProgress (1): 30/45 kBProgress (1): 32/45 kBProgress (1): 33/45 kBProgress (1): 34/45 kBProgress (1): 36/45 kBProgress (1): 37/45 kBProgress (1): 39/45 kBProgress (1): 40/45 kBProgress (1): 41/45 kBProgress (1): 43/45 kBProgress (1): 44/45 kBProgress (1): 45 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/35/maven-parent-35.pom (45 kB at 216 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/25/apache-25.pom
+Progress (1): 16/21 kBProgress (1): 21 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/25/apache-25.pom (21 kB at 103 kB/s)
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ automation ---
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.3.4/maven-shared-utils-3.3.4.pom
+Progress (1): 5.8 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.3.4/maven-shared-utils-3.3.4.pom (5.8 kB at 46 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.6/commons-io-2.6.pom
+Progress (1): 14 kB                   Downloaded from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.6/commons-io-2.6.pom (14 kB at 226 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/42/commons-parent-42.pom
+Progress (1): 16/68 kBProgress (1): 32/68 kBProgress (1): 49/68 kBProgress (1): 65/68 kBProgress (1): 68 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/42/commons-parent-42.pom (68 kB at 276 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/18/apache-18.pom
+Progress (1): 16 kB                   Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/18/apache-18.pom (16 kB at 15 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.3.4/maven-shared-utils-3.3.4.jar
+Progress (1): 16/153 kBProgress (1): 33/153 kBProgress (1): 49/153 kBProgress (1): 62/153 kBProgress (1): 78/153 kBProgress (1): 95/153 kBProgress (1): 111/153 kBProgress (1): 127/153 kBProgress (1): 144/153 kBProgress (1): 153 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.3.4/maven-shared-utils-3.3.4.jar (153 kB at 633 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.6/commons-io-2.6.jar
+Progress (1): 16/215 kBProgress (1): 33/215 kBProgress (1): 49/215 kBProgress (1): 65/215 kBProgress (1): 81/215 kBProgress (1): 97/215 kBProgress (1): 114/215 kBProgress (1): 130/215 kBProgress (1): 147/215 kBProgress (1): 163/215 kBProgress (1): 179/215 kBProgress (1): 196/215 kBProgress (1): 212/215 kBProgress (1): 215 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.6/commons-io-2.6.jar (215 kB at 985 kB/s)
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ automation ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\Users\DELL\.jenkins\workspace\DemoWebshop-CICD\automation\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ automation ---
+[INFO] No sources to compile
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.055 s
+[INFO] Finished at: 2025-08-28T11:51:27+05:30
+[INFO] ------------------------------------------------------------------------
+[Pipeline] }
+[Pipeline] // dir
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Run Cross-Browser Tests)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] echo
+🚀 Running TestNG in parallel on Chrome & Edge...
+[Pipeline] dir
+Running in C:\Users\DELL\.jenkins\workspace\DemoWebshop-CICD\automation
+[Pipeline] {
+[Pipeline] bat
+
+C:\Users\DELL\.jenkins\workspace\DemoWebshop-CICD\automation>mvn test -Dsurefire.suiteXmlFiles=testng.xml 
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< com.demo:automation >-------------------------
+[INFO] Building automation 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ automation ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\Users\DELL\.jenkins\workspace\DemoWebshop-CICD\automation\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ automation ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ automation ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\Users\DELL\.jenkins\workspace\DemoWebshop-CICD\automation\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ automation ---
+[INFO] Recompiling the module because of changed source code.
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 2 source files with javac [debug target 11] to target\test-classes
+[WARNING] system modules path not set in conjunction with -source 11
+[INFO] 
+[INFO] --- surefire:3.1.2:test (default-test) @ automation ---
+[INFO] Using auto detected provider org.apache.maven.surefire.testng.TestNGProvider
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-testng/3.1.2/surefire-testng-3.1.2.pom
+Progress (1): 1.4/3.6 kBProgress (1): 2.8/3.6 kBProgress (1): 3.6 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-testng/3.1.2/surefire-testng-3.1.2.pom (3.6 kB at 1.0 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/3.1.2/surefire-providers-3.1.2.pom
+Progress (1): 1.4/2.6 kBProgress (1): 2.6 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/3.1.2/surefire-providers-3.1.2.pom (2.6 kB at 29 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.1.2/common-java5-3.1.2.pom
+Progress (1): 1.4/2.8 kBProgress (1): 2.8/2.8 kBProgress (1): 2.8 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.1.2/common-java5-3.1.2.pom (2.8 kB at 30 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-testng-utils/3.1.2/surefire-testng-utils-3.1.2.pom
+Progress (1): 1.4/3.2 kBProgress (1): 2.8/3.2 kBProgress (1): 3.2 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-testng-utils/3.1.2/surefire-testng-utils-3.1.2.pom (3.2 kB at 26 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-grouper/3.1.2/surefire-grouper-3.1.2.pom
+Progress (1): 1.4/3.4 kBProgress (1): 2.8/3.4 kBProgress (1): 3.4 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-grouper/3.1.2/surefire-grouper-3.1.2.pom (3.4 kB at 29 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-testng/3.1.2/surefire-testng-3.1.2.jar
+Progress (1): 1.4/47 kBProgress (1): 2.8/47 kBProgress (1): 4.1/47 kBProgress (1): 5.5/47 kBProgress (1): 6.9/47 kBProgress (1): 8.3/47 kBProgress (1): 8.9/47 kBProgress (1): 10/47 kB Progress (1): 12/47 kBProgress (1): 13/47 kBProgress (1): 14/47 kBProgress (1): 16/47 kBProgress (1): 17/47 kBProgress (1): 19/47 kBProgress (1): 20/47 kBProgress (1): 21/47 kBProgress (1): 23/47 kBProgress (1): 24/47 kBProgress (1): 25/47 kBProgress (1): 42/47 kBProgress (1): 47 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-testng/3.1.2/surefire-testng-3.1.2.jar (47 kB at 211 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.1.2/common-java5-3.1.2.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-testng-utils/3.1.2/surefire-testng-utils-3.1.2.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-grouper/3.1.2/surefire-grouper-3.1.2.jar
+Progress (1): 16/40 kBProgress (1): 33/40 kBProgress (1): 40 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-grouper/3.1.2/surefire-grouper-3.1.2.jar (40 kB at 162 kB/s)
+Progress (1): 1.4/14 kBProgress (1): 2.8/14 kBProgress (1): 4.1/14 kBProgress (1): 5.5/14 kBProgress (1): 6.9/14 kBProgress (1): 8.3/14 kBProgress (1): 9.7/14 kBProgress (1): 11/14 kB Progress (1): 12/14 kBProgress (2): 12/14 kB | 1.4/18 kBProgress (2): 14 kB | 1.4/18 kB   Progress (2): 14 kB | 2.8/18 kBProgress (2): 14 kB | 4.1/18 kBProgress (2): 14 kB | 5.5/18 kBProgress (2): 14 kB | 6.9/18 kBProgress (2): 14 kB | 7.5/18 kBProgress (2): 14 kB | 8.9/18 kBProgress (2): 14 kB | 10/18 kB Progress (2): 14 kB | 12/18 kBProgress (2): 14 kB | 13/18 kBProgress (2): 14 kB | 14/18 kBProgress (2): 14 kB | 16/18 kBProgress (2): 14 kB | 17/18 kBProgress (2): 14 kB | 18 kB                              Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-testng-utils/3.1.2/surefire-testng-utils-3.1.2.jar (14 kB at 43 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.1.2/common-java5-3.1.2.jar (18 kB at 28 kB/s)
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running TestSuite
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Aug 28, 2025 11:51:52 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 139
+Aug 28, 2025 11:51:52 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 139.0.3405.119. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.25.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Aug 28, 2025 11:52:03 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 139
+Aug 28, 2025 11:52:03 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 139.0.3405.119. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.25.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Aug 28, 2025 11:52:10 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 139
+Aug 28, 2025 11:52:10 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 139.0.7258.139. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.25.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Aug 28, 2025 11:52:20 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 139
+Aug 28, 2025 11:52:20 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 139.0.7258.139. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.25.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 40.82 s -- in TestSuite
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  56.175 s
+[INFO] Finished at: 2025-08-28T11:52:28+05:30
+[INFO] ------------------------------------------------------------------------
+[Pipeline] }
+[Pipeline] // dir
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Publish Reports)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] junit
+Recording test results
+[Checks API] No suitable checks publisher found.
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] echo
+✅ Pipeline execution complete.
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
