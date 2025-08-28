@@ -16,20 +16,25 @@ pipeline {
         stage('Build') {
             steps {
                 echo '🔧 Compiling the code...'
-                bat 'mvn clean compile'
+                dir('automation') {
+                    bat 'mvn clean compile'
+                }
             }
         }
 
         stage('Run Cross-Browser Tests') {
             steps {
                 echo '🚀 Running TestNG in parallel on Chrome & Edge...'
-                bat 'mvn test -Dsurefire.suiteXmlFiles=testng.xml'
+                dir('automation') {
+                    bat 'mvn test -Dsurefire.suiteXmlFiles=testng.xml'
+                }
             }
         }
 
         stage('Publish Reports') {
             steps {
-                junit 'target/surefire-reports/*.xml'
+                // Adjust the path for test reports inside automation folder
+                junit 'automation/target/surefire-reports/*.xml'
             }
         }
     }
