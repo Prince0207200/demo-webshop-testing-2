@@ -1,11 +1,10 @@
 pipeline {
     agent any
 
-tools {
-    jdk 'Default'
-    maven 'Default'
-}
-
+    tools {
+        jdk 'Default'    // or your actual configured JDK name
+        maven 'Default'  // or your actual Maven installation name
+    }
 
     stages {
         stage('Checkout') {
@@ -17,14 +16,14 @@ tools {
         stage('Build') {
             steps {
                 echo '🔧 Compiling the code...'
-                sh 'mvn clean compile'
+                bat 'mvn clean compile'
             }
         }
 
         stage('Run Cross-Browser Tests') {
             steps {
                 echo '🚀 Running TestNG in parallel on Chrome & Edge...'
-                sh 'mvn test -Dsurefire.suiteXmlFiles=testng.xml'
+                bat 'mvn test -Dsurefire.suiteXmlFiles=testng.xml'
             }
         }
 
