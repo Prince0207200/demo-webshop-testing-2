@@ -1,11 +1,11 @@
 # DemoWebshop Automated Testing with Jenkins CI/CD
 
-## 📌 Project Overview
+## Project Overview
 This project automates testing for the **DemoWebshop** application using **Selenium WebDriver** integrated with a **Jenkins CI/CD pipeline**. The goal is to enable continuous testing to ensure code quality and receive rapid feedback during development.
 
 ---
 
-## 📂 Table of Contents
+## Table of Contents
 - [Prerequisites](#prerequisites)
 - [Setup Instructions](#setup-instructions)
 - [How to Run](#how-to-run)
@@ -20,7 +20,9 @@ This project automates testing for the **DemoWebshop** application using **Selen
 
 ---
 
-## ✅ Prerequisites
+## Prerequisites
+✅ This section lists the tools you need before running the project:
+
 - Java JDK 8 or higher  
 - Maven installed  
 - Jenkins installed and running (tested on `localhost:8080`)  
@@ -29,7 +31,9 @@ This project automates testing for the **DemoWebshop** application using **Selen
 
 ---
 
-## ⚙️ Setup Instructions
+## Setup Instructions
+
+⚙️ Follow these steps to set up the project locally or on Jenkins:
 
 1. **Clone the repository:**
     ```bash
@@ -55,11 +59,14 @@ This project automates testing for the **DemoWebshop** application using **Selen
 
 ---
 
-## ▶️ How to Run
+## How to Run
 
-### 🧪 Locally via Maven:
+▶️ You can run the test suite in two ways:
+
+### Locally via Maven:
 ```bash
 mvn test
+
 ```
     
 - Via Jenkins(Recommended):
