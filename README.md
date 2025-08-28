@@ -1,14 +1,16 @@
 # DemoWebshop Automated Testing with Jenkins CI/CD
 
-## Project Overview
-This project automates the testing of the DemoWebshop application using Selenium WebDriver integrated with Jenkins CI/CD pipeline. The goal is to enable continuous testing to ensure code quality and faster feedback cycles.
+## 📌 Project Overview
+This project automates testing for the **DemoWebshop** application using **Selenium WebDriver** integrated with a **Jenkins CI/CD pipeline**. The goal is to enable continuous testing to ensure code quality and receive rapid feedback during development.
 
-## Table of Contents
+---
+
+## 📂 Table of Contents
 - [Prerequisites](#prerequisites)
 - [Setup Instructions](#setup-instructions)
 - [How to Run](#how-to-run)
 - [Jenkins Pipeline Details](#jenkins-pipeline-details)
-- [Jenkins Console Output Screenshot](#jenkins-console-output-screenshot)
+- [Jenkins Console Output](#jenkins-console-output)
 - [Test Results](#test-results)
 - [Known Issues & Resolutions](#known-issues--resolutions)
 - [Conclusion](#conclusion)
@@ -18,40 +20,49 @@ This project automates the testing of the DemoWebshop application using Selenium
 
 ---
 
-## Prerequisites
-- Java JDK 8 or higher installed  
+## ✅ Prerequisites
+- Java JDK 8 or higher  
 - Maven installed  
-- Jenkins installed and running (tested on localhost:8080)  
+- Jenkins installed and running (tested on `localhost:8080`)  
 - Selenium WebDriver dependencies configured  
-- DemoWebshop application accessible
+- DemoWebshop application accessible  
 
 ---
 
-## Setup Instructions
-1. Clone the repository:
+## ⚙️ Setup Instructions
+
+1. **Clone the repository:**
     ```bash
     git clone https://github.com/yourusername/demo-webshop-automation.git
-    cd demo-webshop-automation
+    cd automation
     ```
-2. Install dependencies using Maven:
+    *Alternatively: You can manually import this project into Eclipse as a Maven project.*
+
+2. **Install dependencies:**
     ```bash
     mvn clean install
     ```
-3. Configure Jenkins:
+
+3. **Configure Jenkins:**
     - Create a new Jenkins job (Freestyle or Pipeline)
-    - Connect to your project repository
-    - Set build triggers as needed (e.g., GitHub webhook)
-    - Add build steps to run your tests (`mvn test` or equivalent)
+    - Connect it to your GitHub repository
+    - Set build triggers (e.g., GitHub webhook)
+    - Add a build step to run tests:
+      ```bash
+      mvn test
+      ```
     - Configure post-build actions to publish test reports
 
 ---
 
-## How to Run
-- Locally via Maven:
-    ```bash
-    mvn test
-    ```
-- Via Jenkins:
+## ▶️ How to Run
+
+### 🧪 Locally via Maven:
+```bash
+mvn test
+```
+    
+- Via Jenkins(Recommended):
     - Trigger build manually or by commit webhook
     - Jenkins will execute tests and publish reports
 
@@ -67,19 +78,36 @@ This project automates the testing of the DemoWebshop application using Selenium
 
 ---
 
-## Jenkins Console Output Screenshot  
-![Console Output](images/console-output.png)
+[View Console Output (Text File)](../images/consolelog-output.txt)
+<details>
+<summary>🔧 Click to view sample Jenkins console output</summary>
+Started by user Prince Gupta
+Obtained Jenkinsfile from Git
+Running on Jenkins node
+🔧 Compiling the code...
+🚀 Running TestNG in parallel on Chrome & Edge...
+
+[INFO] Running TestSuite
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0
+✅ Pipeline execution complete.
+Finished: SUCCESS
+
+</details>
+
+
+
+
 
 ---
 
 ## Test Results
-- Total tests run: 20  
-- Passed: 20  
+- Total tests run: 4
+- Passed: 4  
 - Failed: 0  
 - Test reports are published inside Jenkins under the "Test Results" section.  
 
 **Test Report Screenshot:**  
-![Test Report](images/test-report.png)
+![Test Report](images/LoginTestcase-report.png)
 
 ---
 
@@ -98,9 +126,11 @@ The automation framework integrated with Jenkins ensures continuous testing of D
 
 | Description             | Screenshot                                  |
 |------------------------|--------------------------------------------|
-| Jenkins Job Configuration | ![Job Config](images/jenkins-job-config.png) |
-| Jenkins Console Output    | ![Console](images/console-output.png)        |
-| Test Results Report       | ![Report](images/test-report.png)             |
+| Pipeline Output    | ![Console](images/Pipeline-output.png)        |
+| Test Results Report       | ![Report](images/LoginTestcase-report.png)   |
+| Jenkins Job Configuration (General) | ![Job Config](images/jenkins-job-config-1.png) |
+| Jenkins Job Configuration (Trigger/Pipeline) | ![Job Config](images/jenkins-job-config-2.png) |
+| Jenkins Job Configuration (Pipeline) | ![Job Config](images/jenkins-job-config-3.png) |
 
 ---
 
@@ -111,8 +141,8 @@ Since the Jenkins server is running locally at `http://localhost:8080`, remote a
 
 ## Contact
 For questions about this project, please contact:  
-**Your Name**  
-Email: your.email@example.com  
+**Prince Gupta**  
+Email: princegupta1455@gmail.com  
 
 ---
 
