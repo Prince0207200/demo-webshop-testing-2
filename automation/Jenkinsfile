@@ -1,0 +1,42 @@
+pipeline {
+    agent any
+
+    tools {
+        jdk 'jdk-21'
+        maven 'maven-3.9.6'
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/Prince0207200/demo-webshop-testing-2.git'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                echo '🔧 Compiling the code...'
+                sh 'mvn clean compile'
+            }
+        }
+
+        stage('Run Cross-Browser Tests') {
+            steps {
+                echo '🚀 Running TestNG in parallel on Chrome & Edge...'
+                sh 'mvn test -Dsurefire.suiteXmlFiles=testng.xml'
+            }
+        }
+
+        stage('Publish Reports') {
+            steps {
+                junit 'target/surefire-reports/*.xml'
+            }
+        }
+    }
+
+    post {
+        always {
+            echo '✅ Pipeline execution complete.'
+        }
+        failure {
+            echo '❌ Buil
