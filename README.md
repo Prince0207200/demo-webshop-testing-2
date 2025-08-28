@@ -85,7 +85,7 @@ mvn test
 
 ---
 
-[View Console Output (Text File)](../images/consolelog-output.txt)
+[View Console Output (Text File)](/images/consolelog-output.txt)
 <details>
 <summary>🔧 Click to view sample Jenkins console output</summary>
 Started by user Prince Gupta
